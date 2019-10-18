@@ -3,25 +3,38 @@
 }
 
 <div class="jumbotron">
-    <h1>Ethan Milles' MIS 4200 page</h1>
+    <h1>Ethan Milles' MIS 4200 page<span class="glyphicon glyphicon-qrcode"></span></h1>
     <p class="lead">This page is a short glimpse at me, change</p>   
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Pets</h2>
+        <h2>Pets<span class="glyphicon glyphicon-piggy-bank"></span></h2>
         <p>
-            I have three pets back home; one dog named Rosie, one cat named George and one cat named Penny. Also my roommate has a puppy named Jax.
+            I have three pets back home; one dog named Rosie, one cat named George and one cat named Penny. Also my roommate has a puppy named Jax.<br />
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pets, Vets, Apts
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Pets", "Index", "Pets")</li>
+                    <li>@Html.ActionLink("Vets", "Index", "Vets")</li>
+                    <li>@Html.ActionLink("Appointments", "Index", "Appointments")</li>
+                </ul>
+             </div>
+
+
+            
         </p>
         
     </div>
     <div class="col-md-4">
-        <h2>Overwatch</h2>
+        <h2>Overwatch<span class="glyphicon glyphicon-king"></span></h2>
         <p> Overwatch is my favorite video game. Overwatch is a team based first person shooter game with different heros to play as. </p>
         <p><a class="btn btn-default" href="https://playoverwatch.com/en-us/">Overwatch's Website &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Food</h2>
+        <h2>Food<span class="glyphicon glyphicon-apple"></span></h2>
         <p> My favorite food is Orange Chicken from Panda Express. Orange Chicken has been my favorite food since I was a kid and my aunt got it at the mall. </p>
         <p><a class="btn btn-default" href="https://www.pandaexpress.com/menu/entrees/orange-chicken">Order Now &raquo;</a></p>
     </div>

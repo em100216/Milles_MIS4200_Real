@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Milles_MIS4200_Real.Models.Appointment>
+
+@{
+    ViewBag.Title = "Index";
+    <div class="well"> This is where you can book or check appointments.</div>
+}
+
+<h2>Appointments</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vet.vetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.aptDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vet.vetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aptDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.aptID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.aptID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.aptID })
+        </td>
+    </tr>
+}
+
+</table>

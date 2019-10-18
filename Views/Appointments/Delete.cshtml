@@ -1,0 +1,48 @@
+﻿@model Milles_MIS4200_Real.Models.Appointment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vet.vetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vet.vetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aptDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aptDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.petID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.petID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

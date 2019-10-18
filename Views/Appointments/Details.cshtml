@@ -1,0 +1,42 @@
+﻿@model Milles_MIS4200_Real.Models.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vet.vetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vet.vetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aptDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aptDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.petID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.petID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.aptID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

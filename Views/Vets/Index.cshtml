@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Milles_MIS4200_Real.Models.Vet>
+
+@{
+    ViewBag.Title = "Index";
+    <div class="well">This is where you can see our vets and information to contact them.</div>
+}
+
+<h2>Vet Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.vetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vetPhone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vetPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vetID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vetID })
+        </td>
+    </tr>
+}
+
+</table>
