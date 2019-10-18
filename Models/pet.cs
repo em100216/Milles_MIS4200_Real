@@ -11,17 +11,17 @@ namespace Milles_MIS4200_Real.Models
     {
         public int petID { get; set; }
         [Display (Name="Pet Name")]
-        /*[Required(ErrorMessage ="Pet Name is required")]
-        [StringLength(25)]*/
+        [Required(ErrorMessage ="Pet Name is required")]
+        [StringLength(25)]
         public string petName { get; set; }
         [Display (Name="Type of Pet")]
-        /*[Required]
-        [StringLength(25)]*/
+        [Required]
+        [StringLength(25)]
         public string petType { get; set; }
         [Display (Name="Phone Number")]
-        /*[DataType(DataType.PhoneNumber)]
+        [DataType(DataType.PhoneNumber)]
         [RegularExpression(@"^(\(\d{3}\) |\d{3}-\d{3}-\d{4}$",
-            ErrorMessage ="Phone number must be in the format (xxx) xxx-xxxx or xxx-xxx-xxxx")]*/
+            ErrorMessage ="Phone number must be in the format (xxx) xxx-xxxx or xxx-xxx-xxxx")]
         public string phone { get; set; }
         // prop tab tab 
         public ICollection<Appointment> Appointment { get; set; }
